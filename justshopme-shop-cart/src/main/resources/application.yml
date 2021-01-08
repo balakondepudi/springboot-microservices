@@ -1,0 +1,8 @@
+server:
+  port: 8889
+
+spring:
+  application:
+    name: SHOP-SERVICE
+  zipkin:
+    base-url: http://localhost:9411 

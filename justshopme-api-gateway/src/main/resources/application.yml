@@ -1,0 +1,36 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: SHOP-SERVICE
+        uri: lb://SHOP-SERVICE
+        predicates:
+        - Path=/shop/**
+        
+        
+      - id: INVENTORY-SERVICE
+        uri: lb://INVENTORY-SERVICE
+        predicates:
+        - Path=/inventory/**
+        
+            
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
