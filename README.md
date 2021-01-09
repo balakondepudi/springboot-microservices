@@ -13,7 +13,7 @@ A Spring Boot microservices application to implement a simple shopping cart. Thi
 - justshopme-shop-cart - shop cart microservice to expose API's for shopping cart
 - justshopme-inventory-cart - inventory cart microservice to expose API's for inventory cart
 - hystrix-dashboard - hystrix dashboard implements curcuit breaker and to view API success/failures from the dashboard
-- zipkin-server - common zipkin log server that can be used as end-to-end log analysis between microservices for an API request
+- zipkin-server + Sleuth settings - common zipkin log server that can be used as end-to-end log analysis between microservices for an API request
 
 Shop and Inventory API usage can be found from https://github.com/balakondepudi/spring-boot-shopping-cart-apis#introduction
 
